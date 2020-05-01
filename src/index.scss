@@ -1,0 +1,15 @@
+
+$border-radius: 0;
+$alert-border-width: 0;
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+html, body {
+  margin-top: 1rem;
+  background-color: #edf2f9;
+  color: #5e6e82;
+}
+
+h1 {
+  padding-bottom: 0.5rem;
+}
