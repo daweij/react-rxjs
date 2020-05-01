@@ -8,11 +8,21 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (text.length) {
+    if (isFormValid()) {
       messageService.add(text);
       textInput.current.focus();
       setText("");
     }
+  };
+
+  const handleReset = (e) => {
+    e.preventDefault();
+    messageService.clear();
+    textInput.current.focus();
+  };
+
+  const isFormValid = () => {
+    return text.length;
   };
 
   return (
@@ -29,8 +39,17 @@ const Form = () => {
         />
 
         <div className="input-group-append">
-          <button type="submit" className="btn btn-primary">
-            Send
+          <button
+            type="submit"
+            className="btn btn-primary"
+            disabled={!isFormValid()}
+          >
+            Add
+          </button>
+        </div>
+        <div className="input-group-append">
+          <button type="reset" className="btn btn-danger" onClick={handleReset}>
+            Clear
           </button>
         </div>
       </div>

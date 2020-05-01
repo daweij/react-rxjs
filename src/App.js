@@ -5,7 +5,7 @@ import Messages from "./Messages";
 const App = () => {
   return (
     <div className="container">
-      <h1>Messages:</h1>
+      <h1>Add message:</h1>
       <Form />
       <Messages />
     </div>

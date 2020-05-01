@@ -1,8 +1,17 @@
 
 $border-radius: 0;
-$alert-border-width: 0;
 
+@import '~font-awesome/css/font-awesome.min.css';
 @import '~bootstrap/scss/bootstrap.scss';
+
+.btn-group.btn-group-block {
+  display: flex;
+
+  .btn {
+    flex: 1;
+  }
+}
+
 
 html, body {
   margin-top: 1rem;
